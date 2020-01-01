@@ -6,8 +6,8 @@ System.out.println("1.campus"+"2.campus");
 int choose=in.nextint()
 
 switch(choose) {
-  case 1:tel_hai.Register(campus1)
+  case 1:tel_hai.Tech_camp.menu();
     break;
-  case 2:tel_hai.Register(campus2)
+  case 2:tel_hai.Academ_camp.menu();
   
 }
