@@ -1,0 +1,30 @@
+public class Lecturer{
+
+    private string name;
+    private string course;
+    
+    public lecturer(string name,string course){
+        this.name=name;
+         this.course=course;
+    }
+
+    public string Getname(){
+        return this.name;
+    }
+   
+    public string Getname(){
+        return this.name;
+    }
+   
+    public string Getcourse(){
+        return this.course;
+    }
+   
+    public void Setname(string name){
+        this.name=name;
+    }
+   
+    public void Setcourse(string course){
+        this.course=course;
+    }
+}
