@@ -1,0 +1,13 @@
+import java util.Scanner;
+
+public void Maim menu(){
+Scanner in=new Scanner(system.in)
+System.out.println("1.campus"+"2.campus");
+int choose=in.nextint()
+
+switch(choose) {
+  case 1:tel_hai.Register(campus1)
+    break;
+  case 2:tel_hai.Register(campus2)
+  
+}
