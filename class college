@@ -1,0 +1,7 @@
+public class student{
+
+String[] stutent = new String[30];
+Scanner s = new Scanner(System.in);
+for(int i=0;i<student.Lenghe;i++) {
+	System.out.println("Get.id");
+}
