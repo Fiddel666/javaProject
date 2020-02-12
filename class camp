@@ -19,7 +19,24 @@ switch (camp) {
     System.out.println("Add lecturer");
     break;
 		}
-
+ private string Arr statis=new string[5]
+ switch(statis){
+  case 1:
+    System.out.println("Software engineering");
+    break;
+  case 2:
+    System.out.println("Electrical Engineering");
+    break;
+  case 3:
+    System.out.println("Structural engineering");
+    break;
+  case 4:
+    System.out.println("Water Engineering");
+    break;
+  case 5:
+    System.out.println("Space Science");
+    break;
+    }
 
 
 
