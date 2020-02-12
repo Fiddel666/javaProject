@@ -1,0 +1,29 @@
+public class camp{
+static void()
+System.out.println("1.Remove student");
+System.out.println("2.Add student");
+System.out.println("3.Remove lecturer");
+System.out.println("4.Add lecturer");
+}
+switch (camp) {
+  case 1:
+    System.out.println("Remove student");
+    break;
+  case 2:
+    System.out.println("Add student");
+    break;
+  case 3:
+    System.out.println("Remove lecturer");
+    break;
+  case 4:
+    System.out.println("Add lecturer");
+    break;
+		}
+
+
+
+
+
+
+
+
