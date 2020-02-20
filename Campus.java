@@ -12,8 +12,12 @@ class Campus{
                                                     "Space Science"
                                                 };
     int choose;
-    
+    String name = new String();
+    String id = new String();
+    String course = new String();
+    int year;
     int loc;
+	
     Scanner in = new Scanner(System.in);
     
 	/* constractors */
@@ -74,10 +78,10 @@ class Campus{
         }
             
         System.out.println("Enter Lecturer name: ");
-        String name = in.nextLine();
+        name = in.nextLine();
 			
         System.out.println("Enter Lecturer course: ");
-        String course = choose_curs();
+        course = choose_curs();
             
 		arr_of_lecturers[loc] = new Lecturer(name,course);
 		
@@ -100,16 +104,16 @@ class Campus{
 		}
 		
 		System.out.println("Enter student name: ");
-		String name = in.nextLine();
+		name = in.nextLine();
 		
 		System.out.println("Enter student ID: ");
-		String id = in.nextLine();
+		id = in.nextLine();
 		
 		System.out.println("Enter student course: ");
-		String course = choose_curs();
+		course = choose_curs();
 		
 		System.out.println("Enter student year: ");
-		int year = Integer.parseInt(in.nextLine());
+		year = Integer.parseInt(in.nextLine());
 		
 		arr_of_students[loc] = new Student(name, id, course, year);
 		
@@ -120,10 +124,10 @@ class Campus{
 		loc = -1;
 		
 		System.out.println("Enter Lecturer name: ");
-        String name = in.nextLine();
+        name = in.nextLine();
 			
         System.out.println("Enter Lecturer course: ");
-        String course = choose_curs();
+        course = choose_curs();
 			
         for(int i = 0; i < arr_of_lecturers.length; i++) {
             if(arr_of_lecturers[i].Getname() == name && arr_of_lecturers[i].Getcourse() == course) {
@@ -139,16 +143,16 @@ class Campus{
 		loc = -1;
 		
         System.out.println("Enter student name: ");
-        String name = in.nextLine();
+        name = in.nextLine();
 		
         System.out.println("Enter student ID: ");
-        String id = in.nextLine();
+        id = in.nextLine();
 		
         System.out.println("Enter student course: ");
-        String course = choose_curs();
+        course = choose_curs();
 		
         System.out.println("Enter student year: ");
-        int year = Integer.parseInt(in.nextLine());
+        year = Integer.parseInt(in.nextLine());
 		
 		for(int i = 0; i < arr_of_students.length; i++) {
             if((arr_of_students[i].Getname().equals(name)) ||
@@ -172,10 +176,6 @@ class Campus{
         System.out.println("4.Add lecturer");
         
         choose = Integer.parseInt(in.nextLine());
-        String name = new String();
-        String id = new String();
-        String course = new String();
-        int year;
         
         switch (choose) {
             case 1:
