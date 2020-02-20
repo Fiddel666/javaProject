@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 
 class Campus{
@@ -40,20 +41,20 @@ class Campus{
     /* SETS */
 	
 	/* TO STRING */
-    public String lecturer_to_string() {
-        String str = new String();
-        for(int i = 0; i < arr_of_lecturers.length; i++) {
-            str += i + ". name:" + arr_of_lecturers[i].Getname() + ", course:" + arr_of_lecturers[i].Getcourse() + "\n";
-        }
-        return str;
-    }
-    
-    public String Student_to_string() {
-        String str = new String();
-        for(int i = 0; i < arr_of_students.length; i++) {
-            str += i + ". name:" + arr_of_students[i].Getname() + ", course:" + arr_of_students[i].Getcourse() + "\n";
-        }
-        return str;
+    public void ShowPeople() {
+    	for(int i=0;i<arr_of_students.length;i++) {
+    	    System.out.println("Student " + (i + 1));
+    		System.out.println("Name :" + arr_of_students[i].Getname() + "\nID:" + arr_of_students[i].Getid() + "\nCourse:" + arr_of_students[i].Getcourse());
+    	    System.out.println("");
+    	}
+    	System.out.println("\n");
+    	
+    	for(int i=0;i<arr_of_lecturers.length;i++) {
+    		System.out.println("Lecturer " + (i + 1));
+    		System.out.println("Name:" + arr_of_lecturers[i].Getname() + "\nCourse:" + arr_of_lecturers[i].Getcourse());
+    		System.out.println("");
+    	}
+    	System.out.println("\n\n");
     }
     /* TO STRING */
 	
@@ -73,10 +74,10 @@ class Campus{
         }
             
         System.out.println("Enter Lecturer name: ");
-        name = in.nextLine();
+        String name = in.nextLine();
 			
         System.out.println("Enter Lecturer course: ");
-        course = choose_curs();
+        String course = choose_curs();
             
 		arr_of_lecturers[loc] = new Lecturer(name,course);
 		
@@ -99,16 +100,16 @@ class Campus{
 		}
 		
 		System.out.println("Enter student name: ");
-		name = in.nextLine();
+		String name = in.nextLine();
 		
 		System.out.println("Enter student ID: ");
-		id = in.nextLine();
+		String id = in.nextLine();
 		
 		System.out.println("Enter student course: ");
-		course = choose_curs();
+		String course = choose_curs();
 		
 		System.out.println("Enter student year: ");
-		year = Integer.parseInt(in.nextLine());
+		int year = Integer.parseInt(in.nextLine());
 		
 		arr_of_students[loc] = new Student(name, id, course, year);
 		
@@ -119,10 +120,10 @@ class Campus{
 		loc = -1;
 		
 		System.out.println("Enter Lecturer name: ");
-        name = in.nextLine();
+        String name = in.nextLine();
 			
         System.out.println("Enter Lecturer course: ");
-        course = choose_curs();
+        String course = choose_curs();
 			
         for(int i = 0; i < arr_of_lecturers.length; i++) {
             if(arr_of_lecturers[i].Getname() == name && arr_of_lecturers[i].Getcourse() == course) {
@@ -138,22 +139,22 @@ class Campus{
 		loc = -1;
 		
         System.out.println("Enter student name: ");
-        name = in.nextLine();
+        String name = in.nextLine();
 		
         System.out.println("Enter student ID: ");
-        id = in.nextLine();
+        String id = in.nextLine();
 		
         System.out.println("Enter student course: ");
-        course = choose_curs();
+        String course = choose_curs();
 		
         System.out.println("Enter student year: ");
-        year = Integer.parseInt(in.nextLine());
+        int year = Integer.parseInt(in.nextLine());
 		
 		for(int i = 0; i < arr_of_students.length; i++) {
             if((arr_of_students[i].Getname().equals(name)) ||
 				(arr_of_students[i].Getcourse().equals(course)) ||
 				(arr_of_students[i].Getid().equals(id)) ||
-				(arr_of_students[i].Getyear().equals(year))) {
+				(arr_of_students[i].Getyear()==year)) {
 					
 					arr_of_students[i] = new Student();
 					System.out.println("Student deleted");
@@ -207,15 +208,15 @@ class Campus{
         
         switch(choose) {
             case 1:
-                return arr_of_courses[choose];
+                return arr_of_courses[choose - 1];
             case 2:
-                return arr_of_courses[choose];
+                return arr_of_courses[choose - 1];
             case 3:
-                return arr_of_courses[choose];
+                return arr_of_courses[choose - 1];
             case 4:
-                return arr_of_courses[choose];
+                return arr_of_courses[choose - 1];
             case 5:
-                return arr_of_courses[choose];
+                return arr_of_courses[choose - 1];
             default:
                 System.out.println("Error");
                 return "Error";
